@@ -1,0 +1,25 @@
+<% provide(:title, "Edit  #{@member.name}'s profile") %>
+<h1>Update <%= @member.name+" "+@member.last_name %>'s profile</h1>
+
+
+	<%= form_for(@member) do |f| %>
+
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+		
+		<%= f.label :last_name %>
+		<%= f.text_field :last_name %>
+
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+
+		<%= f.label :address %>
+		<%= f.text_field :address %>
+
+		<%= f.label :postal %>
+		<%= f.text_field :postal %>
+
+		<%= f.submit "Update member", class: "btn btn-large btn-primary" %>
+	<% end %>
+
+		<%= link_to "delete", @member, method: :delete, data: { confirm: "Are you sure?" } %>

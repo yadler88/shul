@@ -1,0 +1,6 @@
+<% provide :title, 'All members' %>
+<h1>All members</h1>
+<%= link_to "Add member", new_member_path %>
+<ul class="users">
+	<%= render @members %>
+</ul>

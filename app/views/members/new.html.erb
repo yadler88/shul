@@ -1,0 +1,23 @@
+<% provide(:title, 'Add member') %>
+<h1>Add member</h1>
+
+
+		<%= form_for(@member) do |f| %>
+
+			<%= f.label :name %>
+			<%= f.text_field :name %>
+			
+			<%= f.label :last_name %>
+			<%= f.text_field :last_name %>
+
+			<%= f.label :email %>
+			<%= f.text_field :email %>
+
+			<%= f.label :address %>
+			<%= f.text_field :address %>
+
+			<%= f.label :postal %>
+			<%= f.text_field :postal %>
+
+			<%= f.submit "Create member", class: "btn btn-large btn-primary" %>
+		<% end %>
